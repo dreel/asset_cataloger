@@ -27,6 +27,7 @@ var contentsPath = path.resolve(gDataDir, 'Contents.json');
 console.log(gSrcImage);
 
 function resizeImage(imgSet, cb) {
+  console.log('Writing image: ' + imgSet.filename);
   var imgOutputFile = path.resolve(gDataDir, imgSet.filename);
   var size = imgSet.size.split('x');
   var scale = imgSet.scale ? imgSet.scale.split('x')[0] : 1;
@@ -49,7 +50,6 @@ fs.readJson(contentsPath, function (err, contents) {
   var q = async.queue(resizeImage, 8);
   for (var i=0; i < contents.images.length; ++i) {
     var imgSet = contents.images[i];
-    console.log(contents.images[i]);
     var filename = imgSet.filename;
     if (!imgSet.idiom || !imgSet.size) {
       console.error('Could not find idiom or size for image ' + i);
