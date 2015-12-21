@@ -1,0 +1,17 @@
+{
+  "name": "asset_catalog_creator",
+  "version": "0.0.1",
+  "description": "Generate images and fillout xcassets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "async": "^1.5.0",
+    "commander": "^2.9.0",
+    "fs-extra": "^0.26.3",
+    "gm": "^1.21.1"
+  }
+}
