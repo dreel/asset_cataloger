@@ -1,8 +1,11 @@
 {
-  "name": "asset_catalog_creator",
-  "version": "0.0.1",
+  "name": "asset_cataloger",
+  "version": "0.0.2",
   "description": "Generate images and fillout xcassets",
   "main": "index.js",
+  "bin": {
+    "asset_cataloger": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
